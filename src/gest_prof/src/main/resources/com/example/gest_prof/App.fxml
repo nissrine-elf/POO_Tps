@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gest_prof.AppController">
+    <top>
+        <StackPane style="-fx-background-color: #4CAF50; -fx-padding: 10px; -fx-border-color: black; -fx-border-width: 2px; -fx-border-radius: 10px;">
+            <Text fx:id="welcomeText"
+                  text="Bienvenue dans l'application de gestion des professeurs et des départements"
+                  style="-fx-font-family: 'Arial'; -fx-font-size: 20px; -fx-font-weight: bold;"
+                  fill="black"/>
+        </StackPane>
+    </top>
+    <center>
+        <HBox spacing="40" alignment="center" style="-fx-background-color: #E8F5E9; padding: 20px;">
+            <Button text="Gérer Professeur" fx:id="btnProf"
+                    style="-fx-background-color: #4CAF50; -fx-font-size: 13px; -fx-text-fill: black; -fx-padding: 10 10 10 10;"
+                    onAction="#handleGererProf"/>
+            <Button text="Gérer Département" fx:id="btnDepart"
+                    style="-fx-background-color: #4CAF50; -fx-font-size: 13px; -fx-text-fill: black; -fx-padding: 10 10 10 10;"
+                    onAction="#handleGererDepart"  />
+        </HBox>
+    </center>
+</BorderPane>

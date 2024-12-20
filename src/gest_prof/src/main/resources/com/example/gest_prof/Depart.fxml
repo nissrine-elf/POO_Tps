@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="579.0" prefWidth="653.0"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gest_prof.DepartController">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <HBox alignment="CENTER" spacing="20">
+                <VBox spacing="10">
+                    <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Nom du departement" />
+                    <TextField fx:id="txtNom" promptText="Nom" style="-fx-font-size: 14px;" />
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="btnAjouterDepart" onAction="#ajouterDepart"
+                        style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;" text="Ajouter" />
+                <Button fx:id="btnSupprimerDepart" onAction="#msupprimerDepart"
+                        style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;" text="Supprimer" />
+                <Button fx:id="btnModifierDepart" onAction="#modifierDepart"
+                        style="-fx-background-color: #2196F3; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;" text="Modifier" />
+                <Button fx:id="btnAfficherProf" onAction="#afficherProf"
+                        style="-fx-background-color: #FFC107; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;" text="Afficher Professeurs" />
+                <Button fx:id="btnBack" onAction="#back"
+                        style="-fx-background-color: #FFC187; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20;" text="back" />
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <Button fx:id="btnCloseProf" onAction="#fermerProf" style="-fx-background-color: #f44336; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 50;"
+                text="back " visible="false" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets left="100.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="50.0" />
+         </padding></Button>
+    </center>
+   <right>
+        <TableView fx:id="tableDepart" prefHeight="469.0" prefWidth="214.0" style="-fx-font-size: 14px;" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colNom" prefWidth="152.0" text="Nom" />
+            </columns>
+         <BorderPane.margin>
+            <Insets right="200.0" />
+         </BorderPane.margin>
+        </TableView>
+   </right>
+   <left>
+        <TableView fx:id="tableProf" prefHeight="469.0" prefWidth="298.0" style="-fx-font-size: 14px;" visible="false" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="colProfNom" text="Nom" />
+                <TableColumn fx:id="colProfPrenom" text="Prénom" />
+                <TableColumn fx:id="colProfEmail" minWidth="-1.0" prefWidth="140.0" text="Email" />
+            </columns>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+        </TableView>
+   </left>
+</BorderPane>
